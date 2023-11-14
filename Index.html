@@ -1,36 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://kit.fontawesome.com/61ebb60581.js" crossorigin="anonymous"></script>
-    <title>Your Personal Web Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+          background-color: #333;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+        }
+        .logo {
+            color: #FFFFFF;
+            font-size: 24px;
+            font: bold;
+        }
+        nav ul {
+            display:flex ;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 20px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 16px;
+        }
+        nav ul li a .flicker-effect {
+            color: yellow;
+            text-transform: uppercase;
+
+        }
+        @media (max-width: 600px) {
+            header {display: flex;
+                flex-direction: column;
+            }
+           nav ul {display: flex;
+            flex-direction: column;
+
+            }
+            nav ul li {
+                margin-left:0px ;
+                margin-bottom: 10px;
+            }
+        } 
+        @keyframes flicker {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .flicker-effect {
+            animation: flicker 1s infinite;
+        }
+        .element-with-flicker {
+            animation: flicker 1s infinite;
+        }
+        
+
+.logo {
+    max-width: 100px; 
+    height: auto;    
+    display: block;  
+    margin: 0 ; 
+}
+
+        
+
+
+
+    </style>
+    <title>Responsive Header</title>
+    
+   
+    
+    
+  
+   
+    
+    <!-- session final-2 -->
+    <!-- Task: style the header for screens with width under 600 pixels -->
+    <!-- Hint: change the flex direction of the header element to column -->
+    <!-- Hint: change the flex direction of unordered list inside of the nav element to column -->
+    <!-- Hint: change the margins on the list item inside of the nav element, to have a margin of zero pixels on the left, and a margin of 10 pixels on the bottom -->
+    
+    <!-- session final-2 -->
+    <!-- Task: style the element with class 'flicker-effect' to have animation named 'flicker' over 1 second and with infinite iterations -->
+    
+    <!-- session final-2 -->
+    <!-- Task: create an animation named 'flicker' that switches the opacity from 0 to 1 -->
   </head>
   <body>
-    <div class="header">
-        <p class="h1"><strong>rasha</strong></p>
-        <div class="nav">
-            <div class="ul">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#portfolio">portfolio</a>
-            <a href="#services">services</a>
-            <a href="#blog">blog</a>
-            <a href="#contact">contact</a>
-            </div>
-       </div>
-    </div>
-    <div class="main">
-        <div class="section" id="home">home</div>
-        <div class="section" id="about">about</div>
-        <div class="section" id="portfolio">portfolio</div>
-        <div class="section" id="services">services</div>
-        <div class="section" id="blog">blog</div>
-        <div class="section" id="contact">contact</div>
-    </div>
-        
-    
-    
-    
-
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li class="flicker-effect"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- session final-2 -->
+    <!-- Task: add the HTML structure of the page -->
+    <!-- Hint: structure: <header> <div class="logo">Logo</div> <nav> <ul> <li><a>Home</a></li> <li><a>About</a></li> <li><a>Services</a></li> <li class="flicker-effect"><a>Contact</a></li> </ul> </nav> </header> -->
   </body>
 </html>
